@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+    --primary: 30 45% 30%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 30 20% 95%;
+    --secondary-foreground: 30 45% 25%;
+    --muted: 30 10% 94%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 30 35% 40%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 30 15% 88%;
+    --input: 30 15% 88%;
+    --ring: 30 45% 30%;
+    --radius: 0rem;
+  }
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
+    --primary: 30 45% 45%;
+    --primary-foreground: 0 0% 8%;
+    --secondary: 30 20% 15%;
+    --secondary-foreground: 30 45% 75%;
+    --muted: 30 10% 20%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 30 35% 50%;
+    --accent-foreground: 0 0% 8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 30 15% 25%;
+    --input: 30 15% 25%;
+    --ring: 30 45% 45%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { @apply scroll-smooth; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Quicksand', system-ui, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Jost', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display { font-family: 'Jost', system-ui, sans-serif; }
+  .font-body { font-family: 'Quicksand', system-ui, sans-serif; }
+}
